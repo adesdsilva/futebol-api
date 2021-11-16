@@ -132,6 +132,54 @@ public class Partida implements Serializable {
 		this.placarEquipeVisitante = placarEquipeVisitante;
 	}
 
+	public String getGolsEquipeCasa() {
+		return golsEquipeCasa;
+	}
+
+	public void setGolsEquipeCasa(String golsEquipeCasa) {
+		this.golsEquipeCasa = golsEquipeCasa;
+	}
+
+	public String getGolsEquipeVisitante() {
+		return golsEquipeVisitante;
+	}
+
+	public void setGolsEquipeVisitante(String golsEquipeVisitante) {
+		this.golsEquipeVisitante = golsEquipeVisitante;
+	}
+
+	public Integer getPlacarEstendidoEquipeCasa() {
+		return placarEstendidoEquipeCasa;
+	}
+
+	public void setPlacarEstendidoEquipeCasa(Integer placarEstendidoEquipeCasa) {
+		this.placarEstendidoEquipeCasa = placarEstendidoEquipeCasa;
+	}
+
+	public Integer getPlacarEstendidoEquipeVisitante() {
+		return placarEstendidoEquipeVisitante;
+	}
+
+	public void setPlacarEstendidoEquipeVisitante(Integer placarEstendidoEquipeVisitante) {
+		this.placarEstendidoEquipeVisitante = placarEstendidoEquipeVisitante;
+	}
+
+	public Date getDataHoraPartida() {
+		return dataHoraPartida;
+	}
+
+	public void setDataHoraPartida(Date dataHoraPartida) {
+		this.dataHoraPartida = dataHoraPartida;
+	}
+
+	public String getLocalPartida() {
+		return localPartida;
+	}
+
+	public void setLocalPartida(String localPartida) {
+		this.localPartida = localPartida;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
