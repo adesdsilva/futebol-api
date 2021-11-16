@@ -2,11 +2,13 @@ package br.com.sunsystem.partida_futebolapi.dto;
 
 import java.io.Serializable;
 
+import br.com.sunsystem.partida_futebolapi.util.StatusPartida;
+
 public class PartidaGoogleDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String statusPartida;
+	private StatusPartida statusPartida;
 	private String tempoPartida;
 	
 	private String nomeEquipeCasa;
@@ -27,7 +29,7 @@ public class PartidaGoogleDTO implements Serializable {
 	
 	
 
-	public PartidaGoogleDTO(String statusPartida, String tempoPartida, String nomeEquipeCasa, String urlLogoEquipeCasa,
+	public PartidaGoogleDTO(StatusPartida statusPartida, String tempoPartida, String nomeEquipeCasa, String urlLogoEquipeCasa,
 			Integer placarEquiqueCasa, String golsEquipeCasa, Integer placarEstendidoEquipeCasa,
 			String nomeEquipeVisitante, String urlLogoEquipeVisitante, Integer placarEquiqueVisitante,
 			String golsEquipeVisitante, Integer placarEstendidoEquipeVisitante) {
@@ -45,11 +47,11 @@ public class PartidaGoogleDTO implements Serializable {
 		this.placarEstendidoEquipeVisitante = placarEstendidoEquipeVisitante;
 	}
 
-	public String getStatusPartida() {
+	public StatusPartida getStatusPartida() {
 		return statusPartida;
 	}
 
-	public void setStatusPartida(String statusPartida) {
+	public void setStatusPartida(StatusPartida statusPartida) {
 		this.statusPartida = statusPartida;
 	}
 

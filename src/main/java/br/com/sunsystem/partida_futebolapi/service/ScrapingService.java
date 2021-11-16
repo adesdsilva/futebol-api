@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import br.com.sunsystem.partida_futebolapi.dto.PartidaGoogleDTO;
 import br.com.sunsystem.partida_futebolapi.entity.Partida;
 import br.com.sunsystem.partida_futebolapi.util.ScrapingUtil;
+import br.com.sunsystem.partida_futebolapi.util.StatusPartida;
 
 @Service
 public class ScrapingService {
@@ -28,7 +29,10 @@ public class ScrapingService {
 						partida.getEquipeVisitante().getNomeEquipe());
 				
 				PartidaGoogleDTO googleDTO = scrapingUtil.obtemInformacoesGoogle(urlPartida);
-				partidaService.atualizaPartida(partida, googleDTO);
+				if (googleDTO.getStatusPartida() != StatusPartida.PARTIDA_NAO_INICIADA) {
+					partidaService.atualizaPartida(partida, googleDTO);
+				}
+				
 			});
 		}
 	}

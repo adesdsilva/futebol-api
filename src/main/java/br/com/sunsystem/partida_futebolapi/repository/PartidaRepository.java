@@ -12,9 +12,9 @@ import br.com.sunsystem.partida_futebolapi.entity.Partida;
 public interface PartidaRepository extends JpaRepository<Partida, Long> {
 
 	@Query(name = "buscar_quantidade_partidas_periodo",
-			value = "select count(*) from partida as p"
-					+ "where p.data_hora_partida between dateadd("
-					+ "hour, -3, current_timestamp) and current_timestamp"
+			value = "select count(*) from partida as p "
+					+ "where p.data_hora_partida between dateadd( "
+					+ "hour, -3, current_timestamp) and current_timestamp "
 					+ "and ifnull(p.tempo_partida, 'Vazio') != 'Encerrado' ", 
 					nativeQuery = true)
 	public Integer buscarQuantidadePartidasPeriodo();
