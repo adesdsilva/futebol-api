@@ -37,20 +37,4 @@ public class ScrapingService {
 		}
 	}
 
-	public void verificaPartidaPeriodo() {
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

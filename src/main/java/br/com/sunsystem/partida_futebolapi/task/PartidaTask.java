@@ -23,6 +23,11 @@ public class PartidaTask {
 	@Autowired
 	private ScrapingService scrapingService;
 	
+	@Scheduled(cron = "0/30 * 16-23 * * TUE", zone = TIME_ZONE)
+	public void taskPartidaTercaFeira() {
+		inicializaAgendamento("taskPartidaTercaFeira()");
+	}
+	
 	@Scheduled(cron = "0/30 * 19-23 * * WED", zone = TIME_ZONE)
 	public void taskPartidaQuartaFeira() {
 		inicializaAgendamento("taskPartidaQuartaFeira()");
