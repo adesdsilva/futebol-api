@@ -2,7 +2,6 @@ package br.com.sunsystem.partida_futebolapi.task;
 
 import java.util.Date;
 
-import org.jsoup.helper.DataUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import br.com.sunsystem.partida_futebolapi.service.ScrapingService;
+import br.com.sunsystem.partida_futebolapi.util.DataUtil;
 
 @Configuration
 @EnableScheduling
@@ -50,8 +50,7 @@ public class PartidaTask {
 	
 	private void inicializaAgendamento(String diaSemana) {
 		this.gravaLogInfo(String.format("%s: %s", diaSemana, DataUtil.formataDateEmString(new Date(), DD_MM_YYYY_HH_MM_SS)));
-		
-		scrapingService.verificaPartidaPeriodo();
+		scrapingService.verificaPartidasPeriodo();
 	}
 	
 	private void gravaLogInfo(String mensagem) {
