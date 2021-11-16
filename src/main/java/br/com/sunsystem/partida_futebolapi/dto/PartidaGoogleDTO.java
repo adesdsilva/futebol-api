@@ -13,13 +13,13 @@ public class PartidaGoogleDTO implements Serializable {
 	private String urlLogoEquipeCasa;
 	private Integer placarEquiqueCasa;
 	private String golsEquipeCasa;
-	private String placarEstendidoEquipeCasa;
+	private Integer placarEstendidoEquipeCasa;
 	
 	private String nomeEquipeVisitante;
 	private String urlLogoEquipeVisitante;
 	private Integer placarEquiqueVisitante;
 	private String golsEquipeVisitante;
-	private String placarEstendidoEquipeVisitante;
+	private Integer placarEstendidoEquipeVisitante;
 	
 	public PartidaGoogleDTO() {
 	
@@ -28,9 +28,9 @@ public class PartidaGoogleDTO implements Serializable {
 	
 
 	public PartidaGoogleDTO(String statusPartida, String tempoPartida, String nomeEquipeCasa, String urlLogoEquipeCasa,
-			Integer placarEquiqueCasa, String golsEquipeCasa, String placarEstendidoEquipeCasa,
+			Integer placarEquiqueCasa, String golsEquipeCasa, Integer placarEstendidoEquipeCasa,
 			String nomeEquipeVisitante, String urlLogoEquipeVisitante, Integer placarEquiqueVisitante,
-			String golsEquipeVisitante, String placarEstendidoEquipeVisitante) {
+			String golsEquipeVisitante, Integer placarEstendidoEquipeVisitante) {
 		this.statusPartida = statusPartida;
 		this.tempoPartida = tempoPartida;
 		this.nomeEquipeCasa = nomeEquipeCasa;
@@ -93,11 +93,11 @@ public class PartidaGoogleDTO implements Serializable {
 		this.golsEquipeCasa = golsEquipeCasa;
 	}
 
-	public String getPlacarEstendidoEquipeCasa() {
+	public Integer getPlacarEstendidoEquipeCasa() {
 		return placarEstendidoEquipeCasa;
 	}
 
-	public void setPlacarEstendidoEquipeCasa(String placarEstendidoEquipeCasa) {
+	public void setPlacarEstendidoEquipeCasa(Integer placarEstendidoEquipeCasa) {
 		this.placarEstendidoEquipeCasa = placarEstendidoEquipeCasa;
 	}
 
@@ -133,11 +133,11 @@ public class PartidaGoogleDTO implements Serializable {
 		this.golsEquipeVisitante = golsEquipeVisitante;
 	}
 
-	public String getPlacarEstendidoEquipeVisitante() {
+	public Integer getPlacarEstendidoEquipeVisitante() {
 		return placarEstendidoEquipeVisitante;
 	}
 
-	public void setPlacarEstendidoEquipeVisitante(String placarEstendidoEquipeVisitante) {
+	public void setPlacarEstendidoEquipeVisitante(Integer placarEstendidoEquipeVisitante) {
 		this.placarEstendidoEquipeVisitante = placarEstendidoEquipeVisitante;
 	}
 

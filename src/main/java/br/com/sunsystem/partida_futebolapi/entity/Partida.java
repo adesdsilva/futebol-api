@@ -68,18 +68,22 @@ public class Partida implements Serializable {
 	@Column(name = "local_partida")
 	private String localPartida;
 	
+	@Column(name = "tempo_partida")
+	private String tempoPartida;
+	
 	public Partida() {
 		
 	}
 
 	public Partida(Long id, String statusPartida, Equipe equipeCasa, Equipe equipeVisitante, Integer placarEquipeCasa,
-			Integer placarEquipeVisitante) {
+			Integer placarEquipeVisitante, String tempoPartida) {
 		this.id = id;
 		this.statusPartida = statusPartida;
 		this.equipeCasa = equipeCasa;
 		this.equipeVisitante = equipeVisitante;
 		this.placarEquipeCasa = placarEquipeCasa;
 		this.placarEquipeVisitante = placarEquipeVisitante;
+		this.tempoPartida = tempoPartida;
 	}
 
 
@@ -178,6 +182,14 @@ public class Partida implements Serializable {
 
 	public void setLocalPartida(String localPartida) {
 		this.localPartida = localPartida;
+	}
+
+	public String getTempoPartida() {
+		return tempoPartida;
+	}
+
+	public void setTempoPartida(String tempoPartida) {
+		this.tempoPartida = tempoPartida;
 	}
 
 	@Override
